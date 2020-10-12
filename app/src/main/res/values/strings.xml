@@ -3,10 +3,10 @@
     <string name="nous_vous_enverrons_un_mot_de_passe_unique_sur_ce_mobile">Nous vous enverrons un mot de passe unique sur ce mobile</string>
     <string name="otp_verifier">OTP VERIFIER</string>
     <string name="entre_mobile_number">Entre Mobile number</string>
-    <string name="_243">+243</string>
-    <string name="ne_recevez_pas_l_otp">Ne recevez pas l\'OTP</string>
+    <string name="_243">+243-</string>
     <string name="renvoyer_otp">RENVOYER OTP</string>
     <string name="verify_otp">VERIFY OTP</string>
     <string name="get_otp">GET OTP</string>
     <string name="entrez_l_otp_envoyer">Entrez l\'OTP à envoyer</string>
+    <string name="ne_recevez_pas_l_otp">Ne recevez pas l\'OTP</string>
 </resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "201743921742",
+    "firebase_url": "https://myotp-d0dee.firebaseio.com",
+    "project_id": "myotp-d0dee",
+    "storage_bucket": "myotp-d0dee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201743921742:android:d76aa714c155bef3dac91f",
+        "android_client_info": {
+          "package_name": "com.example.myotp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "201743921742-tqjcdp7v6h8j59b9r4jc7kjh3ohs2rs4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myotp",
+            "certificate_hash": "396d9fd6723af4d726b204d5806455148cdd2700"
+          }
+        },
+        {
+          "client_id": "201743921742-oa7hlkkepufuj92ukatu50je0v6a2spl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8cIJEV2BBcnbtN4h-yIeUXZQTOJvT-jM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "201743921742-oa7hlkkepufuj92ukatu50je0v6a2spl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

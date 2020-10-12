@@ -159,27 +159,38 @@
                     android:textColor="@color/colorTextSecond"
                     android:textSize="14sp"
                     />
+
                 <TextView
                     android:id="@+id/textResendOTP"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="5dp"
                     android:text="@string/renvoyer_otp"
                     android:textColor="@color/colorAccent"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
             </LinearLayout>
-            <Button
-                android:id="@+id/buttonVerifyOTP"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="30dp"
-                android:background="@drawable/background"
-                android:text="@string/verify_otp"
-                android:textColor="@color/colorWhite"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/buttonVerifyOTP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:background="@drawable/background"
+                    android:text="@string/verify_otp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    />
+            </FrameLayout>
         </LinearLayout>
 
     </ScrollView>
