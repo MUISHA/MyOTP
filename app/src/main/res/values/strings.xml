@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">MyOTP</string>
+    <string name="app_name">Callingemergency</string>
+    <string name="maps_key" translatable="false">AIzaSyBx_RpwgmlHRMSZwzhIa5WITpv-wVwWwEE</string>
     <string name="nous_vous_enverrons_un_mot_de_passe_unique_sur_ce_mobile">Nous vous enverrons un mot de passe unique sur ce mobile</string>
     <string name="otp_verifier">OTP VERIFIER</string>
     <string name="entre_mobile_number">Entre Mobile number</string>
@@ -9,4 +10,10 @@
     <string name="get_otp">GET OTP</string>
     <string name="entrez_l_otp_envoyer">Entrez l\'OTP à envoyer</string>
     <string name="ne_recevez_pas_l_otp">Ne recevez pas l\'OTP</string>
+    <string name="emergecy">Emergency SOS In</string>
+
+    <string name="gender_unknown">Unknown</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+
 </resources>

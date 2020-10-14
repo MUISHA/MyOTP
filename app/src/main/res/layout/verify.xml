@@ -5,7 +5,7 @@
         android:layout_height="match_parent"
         android:overScrollMode="never"
         android:scrollbars="none"
-        tools:context=".VerifyActivity">
+        tools:context=".otp.VerifyActivity">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

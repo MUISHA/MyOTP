@@ -7,4 +7,12 @@
     <color name="colorTextSecond">#757575</color>
     <color name="colorDevider">#BDBDBD</color>
     <color name="colorWhite">#FFFFFF</color>
+
+    <color name="colorPrimary1">#ff4800</color>
+    <color name="colorPrimaryDark1">#dc4a10</color>
+    <color name="colorAccent1">#009cfd</color>
+
+    <color name="colorPrimaryEditor">#009cfd</color>
+    <color name="colorPrimaryDarkEditor">#1284ca</color>
+    <color name="colorAccentEditor">#e24000</color>
 </resources>
