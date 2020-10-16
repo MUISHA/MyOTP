@@ -2,24 +2,61 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myotp">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Editor"></activity>
-        <!--
-         <activity android:name=".map.MapsActivity"
+        <activity android:name=".Design"
+            android:theme="@style/AppDesign" />
+        <activity
+            android:name=".menu.Drawables"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"/>
-        -->
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".frontend.Enternumber" />
+        <activity android:name=".frontend.Incoming_audio_call" />
+        <activity android:name=".frontend.AudioCallScreen" />
+        <activity android:name=".frontend.AudioCall" />
+        <activity
+            android:name=".Editor"
+            android:theme="@style/EditorTheme" />
+        <!--   -->
+        <activity
+            android:name=".map.MapsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".otp.VerifyActivity"
             android:screenOrientation="portrait"
@@ -28,7 +65,7 @@
             android:name=".otp.SendOPTActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".map.MapsActivity"
+            android:name=".loanding.Loading"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -41,6 +78,8 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/maps_key" />
+
+        <service android:name=".backend.SinchService" />
     </application>
 
 </manifest>

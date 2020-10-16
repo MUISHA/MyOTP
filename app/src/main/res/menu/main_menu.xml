@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/na_home"
+            android:icon="@drawable/ic_home"
+            android:title="home" />
+        <item
+            android:id="@+id/na_calling_sos"
+            android:icon="@drawable/ic_phone"
+            android:title="calling_sos" />
+        <item
+            android:id="@+id/na_addlocation"
+            android:icon="@drawable/ic_map"
+            android:title="add_location" />
+    </group>
+
+    <item android:title="profil">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/na_login"
+                    android:icon="@drawable/ic_key"
+                    android:title="login" />
+                <item
+                    android:id="@+id/na_profile"
+                    android:icon="@drawable/ic_userr"
+                    android:title="profile" />
+                <item
+                    android:id="@+id/na_logout"
+                    android:icon="@drawable/ic_user"
+                    android:title="logout" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="communication">
+        <menu>
+            <item
+                android:id="@+id/na_mail"
+                android:icon="@drawable/ic_email"
+                android:title="email" />
+            <item
+                android:id="@+id/na_appropos"
+                android:icon="@drawable/ic_help"
+                android:title="About calling sos" />
+            <item
+                android:id="@+id/na_exit"
+                android:icon="@drawable/ic_exit"
+                android:title="Fermer" />
+        </menu>
+    </item>
+</menu>

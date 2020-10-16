@@ -16,4 +16,11 @@
     <string name="gender_male">Male</string>
     <string name="gender_female">Female</string>
 
+    <string name="open_drawer">Open Drawer</string>
+    <string name="cloase_drawer">Close Drawer</string>
+    <string name="nam_exit">Exit</string>
+    <string name="etesvousur">Vous voulez quitté</string>
+    <string name="com">Email</string>
+    <string name="fachion_kingqueen">\@fachion_kingqueen</string>
+    <string name="aganze_zagabe_gloire">AGANZE ZAGABE Gloire</string>
 </resources>
