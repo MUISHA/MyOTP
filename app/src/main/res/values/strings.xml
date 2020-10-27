@@ -11,6 +11,9 @@
     <string name="entrez_l_otp_envoyer">Entrez l\'OTP à envoyer</string>
     <string name="ne_recevez_pas_l_otp">Ne recevez pas l\'OTP</string>
     <string name="emergecy">Emergency SOS In</string>
+    <string name="justifytext">GROUPE SOS Jeunesse et de nombreux acteurs de la Protection
+        de l\'Enfance ont lancé une grande consultation citoyenne pour définir et mettre en oeuvre
+        10 actions nationales pour lutter contre les violences envers les enfants. Participez jusqu\'au 9 novembre !</string>
 
     <string name="gender_unknown">Unknown</string>
     <string name="gender_male">Male</string>

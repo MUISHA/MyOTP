@@ -1,16 +1,12 @@
 package com.example.myotp.frontend;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.os.Bundle;
-import android.Manifest;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,7 +31,7 @@ public class Enternumber extends BaseActivity implements SinchService.StartFaile
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_enternumber);
 
 
         phonetxt = ( EditText ) findViewById ( R.id.phonetxt );

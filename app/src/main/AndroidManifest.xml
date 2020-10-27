@@ -39,7 +39,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Design"
+        <activity android:name=".map.ActivityMaps"></activity>
+        <activity android:name=".map.Permission" />
+        <activity android:name=".Registre" />
+        <activity android:name=".Login" />
+        <activity android:name=".Apropos" />
+        <activity
+            android:name=".Design"
             android:theme="@style/AppDesign" />
         <activity
             android:name=".menu.Drawables"
@@ -50,19 +56,20 @@
         <activity android:name=".frontend.AudioCallScreen" />
         <activity android:name=".frontend.AudioCall" />
         <activity
-            android:name=".Editor"
-            android:theme="@style/EditorTheme" />
-        <!--   -->
+            android:name=".server.scripts.Editor"
+            android:theme="@style/EditorTheme" /> <!--  -->
         <activity
             android:name=".map.MapsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".otp.VerifyActivity"
+            android:parentActivityName=".otp.SendOPTActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".otp.SendOPTActivity"
+            android:parentActivityName=".menu.Drawables"
             android:screenOrientation="portrait" />
         <activity
             android:name=".loanding.Loading"

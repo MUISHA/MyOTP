@@ -20,10 +20,15 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.myotp.Apropos;
 import com.example.myotp.Design;
+import com.example.myotp.Login;
 import com.example.myotp.R;
+import com.example.myotp.map.ActivityMaps;
 import com.example.myotp.map.MapsActivity;
 import com.example.myotp.otp.SendOPTActivity;
+import com.example.myotp.server.scripts.Editor;
+import com.example.myotp.server.scripts.Servers;
 import com.google.android.material.navigation.NavigationView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -116,24 +121,24 @@ public class Drawables extends AppCompatActivity implements View.OnClickListener
                 startActivity(auth);
                 break;
             case R.id.img_addlocation :
-                Intent maps = new Intent(this, MapsActivity.class);
-                startActivity(maps);
+                Intent Add = new Intent(this, Editor.class);
+                startActivity(Add);
                 break;
             case R.id.img_profil :
-                //Intent appropos = new Intent(this, Appros.class);
-                // startActivity(appropos);
+                Intent appropos = new Intent(this, Apropos.class);
+                startActivity(appropos);
                 break;
             case R.id.img_helper :
-                //Intent apropos = new Intent(this, Apropos.class);
-                //startActivity(apropos);
+                Intent apropos = new Intent(this, Apropos.class);
+                startActivity(apropos);
                 break;
             case R.id.img_map :
-                //Intent carton = new Intent(this, Cartographie.class);
-                //startActivity(carton);
+                Intent carton = new Intent(this, ActivityMaps.class);
+                startActivity(carton);
                 break;
             case R.id.img_traking_sos :
-                //Intent SearchMap = new Intent(this, SearchMap.class);
-               // startActivity(SearchMap);
+                Intent searchMap = new Intent(this, ActivityMaps.class);
+                startActivity(searchMap);
                 break;
             default:
                 break;
@@ -144,21 +149,21 @@ public class Drawables extends AppCompatActivity implements View.OnClickListener
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()){
             case R.id.na_calling_sos :
-                //Intent activity = new Intent(this, MainActivity.class);
-                //startActivity(activity);
+                Intent activity = new Intent(this, SendOPTActivity.class);
+                startActivity(activity);
                 break;
             case R.id.na_login :
-                //Intent login_ = new Intent(this, Login.class);
-                //startActivity(login_);
+                Intent login_ = new Intent(this, Login.class);
+                startActivity(login_);
                 break ;
             case R.id.na_addlocation :
-                // Intent addLocat = new Intent(this, Addlocation.class);
-                //  startActivity(addLocat);
+                Intent main = new Intent(this, ActivityMaps.class);
+                startActivity(main);
                 break;
 
             case R.id.na_appropos :
-                //Intent addLocat = new Intent(this, AddEntreprise.class);
-                //startActivity(addLocat);
+                Intent appros = new Intent(this, Apropos.class);
+                startActivity(appros);
                 break;
             case R.id.na_exit :
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -184,6 +189,7 @@ public class Drawables extends AppCompatActivity implements View.OnClickListener
         }
         drawerLayouts.closeDrawer(GravityCompat.START);
         return true;
+
     }
     public boolean onCreateOptionsMenu(android.view.Menu menu) {
         MenuInflater inflater = getMenuInflater();

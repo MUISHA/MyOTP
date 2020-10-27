@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.myotp.R;
+import com.example.myotp.menu.Drawables;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
@@ -21,10 +22,12 @@ import java.util.concurrent.TimeUnit;
 public class SendOPTActivity extends AppCompatActivity  {
     private EditText inputMobile;
     private Button buttonGetOTP;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.send_o_p_t);
+
         inputMobile = findViewById(R.id.inputMobile);
         buttonGetOTP = findViewById(R.id.buttonGetOTP);
         final ProgressBar progressBar = findViewById(R.id.progressBar);
@@ -75,4 +78,10 @@ public class SendOPTActivity extends AppCompatActivity  {
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, Drawables.class);
+        startActivity(intent);
+        finish();
+    }
 }

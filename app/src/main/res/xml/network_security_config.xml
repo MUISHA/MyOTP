@@ -2,6 +2,6 @@
 <network-security-config>
     <base-config cleartextTrafficPermitted="true" />
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">http://192.168.1.121/demo_sos/</domain>
+        <domain includeSubdomains="true">http://192.168.8.102/demo_pets/</domain>
     </domain-config>
 </network-security-config>

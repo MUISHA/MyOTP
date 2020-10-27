@@ -1,5 +1,6 @@
 package com.example.myotp.otp;
 
+import androidx.activity.OnBackPressedDispatcher;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,7 +15,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.myotp.MainActivity;
+
 import com.example.myotp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -83,9 +84,9 @@ public class VerifyActivity extends AppCompatActivity implements View.OnClickLis
                                     buttonVerifyOTP.setVisibility(View.VISIBLE);
                                     if (task.isSuccessful())
                                     {
-                                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                        startActivity(intent);
+                                        //Intent intent = new Intent(getApplicationContext(), Se.class);
+                                        //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                        //startActivity(intent);
                                     }else {
                                         Toast.makeText(VerifyActivity.this, "Le code de vérification entré n'était pas valide", Toast.LENGTH_SHORT).show();
                                     }
@@ -221,7 +222,7 @@ public class VerifyActivity extends AppCompatActivity implements View.OnClickLis
 
             }
         });
-        inputCode6.addTextChangedListener(new TextWatcher() {
+            inputCode6.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -245,5 +246,13 @@ public class VerifyActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this, SendOPTActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
