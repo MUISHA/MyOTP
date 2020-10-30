@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".login.LoginActivity">
+    tools:context=".login.RegisterActivity">
     <LinearLayout
         android:id="@+id/imageprofil"
         android:orientation="vertical"
@@ -15,9 +15,9 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imageprofiles"
             android:src="@drawable/ic_userr"
-            android:layout_width="120dp"
+            android:layout_width="100dp"
             android:layout_gravity="center"
-            android:layout_height="120dp"/>
+            android:layout_height="100dp"/>
     </LinearLayout>
     <androidx.cardview.widget.CardView
         android:id="@+id/layoutName"
@@ -35,7 +35,7 @@
             android:layout_margin="16dp">
 
             <TextView
-                android:text="Login"
+                android:text="Registre In"
                 android:layout_marginLeft="3dp"
                 android:layout_marginBottom="10dp"
                 android:textSize="30sp"
@@ -46,12 +46,22 @@
                 android:layout_height="wrap_content" />
 
 
-
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <EditText
-                    android:id="@+id/mEmails"
+                    android:id="@+id/fullName"
+                    android:hint="Fulnam"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="textAutoComplete|textCapWords"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/Email"
                     android:hint="E-mail"
                     android:fontFamily="sans-serif-light"
                     android:inputType="textAutoComplete|textCapWords"
@@ -63,52 +73,54 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <EditText
-                    android:id="@+id/passwords"
+                    android:id="@+id/password"
                     android:hint="Password"
                     android:fontFamily="sans-serif-light"
                     android:inputType="textPassword|textCapWords"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
-
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/phone"
+                    android:hint="Phone"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="number|textCapWords"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-<LinearLayout
-    android:id="@+id/progressBar_logins"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:layout_width="match_parent"
-    android:layout_marginTop="340dp"
-    android:layout_height="70dp">
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_below="@+id/layoutName"
+        android:background="@color/colorPrimary"
+        android:layout_width="300dp"
+        android:text="SIGN IN "
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/colorWhite"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/createText"
+        android:layout_below="@+id/registerBtn"
+        android:background="@color/colorPrimary"
+        android:layout_width="300dp"
+        android:text="LOGIN IN"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorWhite"
+        android:layout_height="wrap_content"/>
+
     <ProgressBar
-        android:id="@+id/progressBar_login"
-        style="?android:attr/progressBarStyle"
+        android:id="@+id/progressBar"
+        style="?android:attr/accountType"
         android:layout_width="wrap_content"
-        android:padding="10dp"
-        android:layout_margin="10dp"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
-
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_below="@+id/progressBar_logins"
-        android:background="@color/colorPrimary"
-        android:layout_width="300dp"
-        android:text="LOGIN"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createText"
         android:layout_centerInParent="true"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/colorWhite"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/btn_signIn"
-        android:layout_below="@+id/btn_login"
-        android:background="@color/colorPrimary"
-        android:layout_width="300dp"
-        android:text="SIGN IN"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/colorWhite"
-        android:layout_height="wrap_content"/>
-
-
+        android:layout_centerVertical="true"
+        android:layout_marginTop="-163dp" />
 </RelativeLayout>

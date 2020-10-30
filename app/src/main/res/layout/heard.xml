@@ -7,19 +7,8 @@
     android:orientation="vertical"
     android:padding="20dp"
     android:background="@drawable/sos_back">
-    <ImageView
-        android:id="@+id/img_profil"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/ic_sos"/>
-    <TextView
-        android:id="@+id/text_profil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="Name User"
-        android:textSize="15sp"
-        android:textColor="@color/colorWhite"/>
+
+
     <TextView
         android:id="@+id/text_"
         android:layout_width="wrap_content"

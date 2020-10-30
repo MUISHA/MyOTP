@@ -7,7 +7,15 @@ import android.os.IBinder;
 import android.util.Log;
 
 
+import androidx.annotation.NonNull;
+
 import com.example.myotp.frontend.Incoming_audio_call;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.sinch.android.rtc.AudioController;
 import com.sinch.android.rtc.ClientRegistration;
 import com.sinch.android.rtc.Sinch;
@@ -203,14 +211,43 @@ public class SinchService extends Service {
         @Override
         public void onIncomingCall(CallClient callClient, final Call call) {
 
-
-
-
             Intent intent = new Intent(SinchService.this, Incoming_audio_call.class);
             intent.putExtra(CALL_ID, call.getCallId());
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             SinchService.this.startActivity(intent);
 
+            FirebaseAuth auth = FirebaseAuth.getInstance();
+            DatabaseReference cal = FirebaseDatabase.getInstance().getReference().child("call_detail").child(auth.getCurrentUser().getUid()).child(call.getCallId());
+
+
+            cal.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if(dataSnapshot.exists()){
+                        String cl = dataSnapshot.child("calltype").getValue(String.class);
+                        if( cl.equalsIgnoreCase("audio") ){
+                            Log.d(TAG, "Incoming call");
+                            Intent intent = new Intent(SinchService.this, Incoming_audio_call.class);
+                            intent.putExtra(CALL_ID, call.getCallId());
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            SinchService.this.startActivity(intent);
+                        }
+                        else{
+                            Log.d(TAG, "Incoming call");
+                           // Intent intent = new Intent(SinchService.this, incoming_video_call.class);
+
+                            intent.putExtra(CALL_ID, call.getCallId());
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            SinchService.this.startActivity(intent);
+                        }
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
 
            /* FirebaseAuth auth = FirebaseAuth.getInstance();
             DatabaseReference cal = FirebaseDatabase.getInstance().getReference().child("call_detail").child(auth.getCurrentUser().getUid()).child(call.getCallId());

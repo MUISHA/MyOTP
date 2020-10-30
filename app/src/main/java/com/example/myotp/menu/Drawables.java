@@ -22,42 +22,16 @@ import android.widget.Toast;
 
 import com.example.myotp.Apropos;
 import com.example.myotp.Design;
-import com.example.myotp.Login;
 import com.example.myotp.R;
+import com.example.myotp.login.LoginActivity;
+import com.example.myotp.login.RegisterActivity;
 import com.example.myotp.map.ActivityMaps;
-import com.example.myotp.map.MapsActivity;
 import com.example.myotp.otp.SendOPTActivity;
 import com.example.myotp.server.scripts.Editor;
-import com.example.myotp.server.scripts.Servers;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.widget.SearchView;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import android.app.SearchManager;
-import android.os.Bundle;
-import android.view.View;
-
-
-
-import com.google.android.material.navigation.NavigationView;
-
-
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 public class Drawables extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener{
     DrawerLayout drawerLayouts;
@@ -66,11 +40,18 @@ public class Drawables extends AppCompatActivity implements View.OnClickListener
     private CircleImageView img_calling,img_addLocat,img_profile,img_helper,img_map;
     private ImageView img_tracking;
 
+
+
     /*------------------------Running activity ------------------------*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawable);
+
+
+
+
+
         /*------------------------Running Drawqble-------------*/
 
 
@@ -112,6 +93,15 @@ public class Drawables extends AppCompatActivity implements View.OnClickListener
 
 
     }
+    /*
+     public void Logout(View view){
+        FirebaseAuth.getInstance().signOut();;
+        Intent intent = new Intent(Drawables.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
+    }
+     */
+
     @Override
     public void onClick(View v) {
         int index = v.getId();
@@ -153,8 +143,8 @@ public class Drawables extends AppCompatActivity implements View.OnClickListener
                 startActivity(activity);
                 break;
             case R.id.na_login :
-                Intent login_ = new Intent(this, Login.class);
-                startActivity(login_);
+               Intent login_ = new Intent(this, LoginActivity.class);
+               startActivity(login_);
                 break ;
             case R.id.na_addlocation :
                 Intent main = new Intent(this, ActivityMaps.class);

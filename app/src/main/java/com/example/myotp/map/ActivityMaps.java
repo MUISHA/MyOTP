@@ -21,6 +21,8 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.example.myotp.login.LoginActivity;
+import com.example.myotp.menu.Drawables;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.ResolvableApiException;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -214,5 +216,13 @@ public class ActivityMaps extends AppCompatActivity implements OnMapReadyCallbac
                         }
                     }
                 });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(ActivityMaps.this, Drawables.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -18,6 +18,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.myotp.login.LoginActivity;
+import com.example.myotp.menu.Drawables;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionDeniedResponse;
@@ -79,5 +81,20 @@ public class Permission extends AppCompatActivity {
                         .check();
             }
         });
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(Permission.this, Drawables.class);
+        startActivity(intent);
+        finish();
     }
 }

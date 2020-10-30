@@ -39,10 +39,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".map.ActivityMaps"></activity>
+        <activity android:name=".login.RegisterActivity"></activity>
+        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".map.ActivityMaps" />
         <activity android:name=".map.Permission" />
-        <activity android:name=".Registre" />
-        <activity android:name=".Login" />
         <activity android:name=".Apropos" />
         <activity
             android:name=".Design"
