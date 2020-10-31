@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.haerul.mypets.MainActivity">
     <item
+        android:id="@+id/action_logout"
+        android:title="Logout" />
+    <item
         android:id="@+id/action_search"
         android:orderInCategory="100"
         android:title="Search"

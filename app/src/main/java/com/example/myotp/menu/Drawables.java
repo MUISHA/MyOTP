@@ -1,6 +1,7 @@
 package com.example.myotp.menu;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
@@ -24,12 +25,15 @@ import com.example.myotp.Apropos;
 import com.example.myotp.Design;
 import com.example.myotp.R;
 import com.example.myotp.login.LoginActivity;
+import com.example.myotp.login.ProfilActivity;
 import com.example.myotp.login.RegisterActivity;
+import com.example.myotp.login.SignIn;
 import com.example.myotp.map.ActivityMaps;
 import com.example.myotp.otp.SendOPTActivity;
 import com.example.myotp.server.scripts.Editor;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -39,7 +43,7 @@ public class Drawables extends AppCompatActivity implements View.OnClickListener
     Toolbar toolbars;
     private CircleImageView img_calling,img_addLocat,img_profile,img_helper,img_map;
     private ImageView img_tracking;
-
+    private FirebaseAuth auth;
 
 
     /*------------------------Running activity ------------------------*/
@@ -47,7 +51,7 @@ public class Drawables extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawable);
-
+        auth = FirebaseAuth.getInstance();
 
 
 
@@ -78,6 +82,9 @@ public class Drawables extends AppCompatActivity implements View.OnClickListener
         /*------------------------ToolBar----------------------*/
         setSupportActionBar(toolbars);
         getSupportActionBar().setTitle("Menu");
+
+
+
 
         android.view.Menu menu = navigationViews.getMenu();
         menu.findItem(R.id.na_logout).setVisible(false);
@@ -115,8 +122,8 @@ public class Drawables extends AppCompatActivity implements View.OnClickListener
                 startActivity(Add);
                 break;
             case R.id.img_profil :
-                Intent appropos = new Intent(this, Apropos.class);
-                startActivity(appropos);
+                Intent singIn = new Intent(this, SignIn.class);
+                startActivity(singIn);
                 break;
             case R.id.img_helper :
                 Intent apropos = new Intent(this, Apropos.class);
@@ -135,6 +142,9 @@ public class Drawables extends AppCompatActivity implements View.OnClickListener
 
         }
     }
+
+
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()){
