@@ -82,7 +82,7 @@
             android:parentActivityName=".menu.Drawables"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".login.ProfilActivity"
+            android:name=".login.DeshboadActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>

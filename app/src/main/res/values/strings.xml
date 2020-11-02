@@ -26,4 +26,8 @@
     <string name="com">Email</string>
     <string name="fachion_kingqueen">\@fachion_kingqueen</string>
     <string name="aganze_zagabe_gloire">AGANZE ZAGABE Gloire</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="users_fragment">Users fragment</string>
+    <string name="profil_fragment">Profils fragment</string>
+    <string name="home_fragment">Home fragment</string>
 </resources>

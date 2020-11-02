@@ -1,7 +1,6 @@
 package com.example.myotp.menu;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
@@ -25,15 +24,12 @@ import com.example.myotp.Apropos;
 import com.example.myotp.Design;
 import com.example.myotp.R;
 import com.example.myotp.login.LoginActivity;
-import com.example.myotp.login.ProfilActivity;
-import com.example.myotp.login.RegisterActivity;
 import com.example.myotp.login.SignIn;
 import com.example.myotp.map.ActivityMaps;
 import com.example.myotp.otp.SendOPTActivity;
 import com.example.myotp.server.scripts.Editor;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
