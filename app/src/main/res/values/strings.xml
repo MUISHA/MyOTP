@@ -1,23 +1,22 @@
 <resources>
     <string name="app_name">Callingemergency</string>
     <string name="maps_key" translatable="false">AIzaSyBx_RpwgmlHRMSZwzhIa5WITpv-wVwWwEE</string>
-    <string name="nous_vous_enverrons_un_mot_de_passe_unique_sur_ce_mobile">Nous vous enverrons un mot de passe unique sur ce mobile</string>
-    <string name="otp_verifier">OTP VERIFIER</string>
+    <string name="nous_vous_enverrons_un_mot_de_passe_unique_sur_ce_mobile">Confirmez votre indicateur national et entre numéro de télephone</string>
+    <string name="otp_verifier">Votre téléphone</string>
     <string name="entre_mobile_number">Entre Mobile number</string>
     <string name="_243">+243-</string>
-    <string name="renvoyer_otp">RENVOYER OTP</string>
-    <string name="verify_otp">VERIFY OTP</string>
-    <string name="get_otp">GET OTP</string>
-    <string name="entrez_l_otp_envoyer">Entrez l\'OTP à envoyer</string>
-    <string name="ne_recevez_pas_l_otp">Ne recevez pas l\'OTP</string>
+    <string name="renvoyer_otp">RENVOYER SMS</string>
+    <string name="verify_otp">Suivant</string>
+    <string name="get_otp">Suivant</string>
+    <string name="entrez_l_otp_envoyer">Nous vous envoyé un code par SMS</string>
+    <string name="ne_recevez_pas_l_otp">Ne recevez pas le SMS ??</string>
+    <string name="ne_recevez_pas_l_otps">Calling sos va vous envoyé un code dans 60 seconde</string>
     <string name="emergecy">Emergency SOS In</string>
-    <string name="justifytext">GROUPE SOS Jeunesse et de nombreux acteurs de la Protection
-        de l\'Enfance ont lancé une grande consultation citoyenne pour définir et mettre en oeuvre
-        10 actions nationales pour lutter contre les violences envers les enfants. Participez jusqu\'au 9 novembre !</string>
+    <string name="justifytext">This App demonstrates how to make a app-to-app call with a header. In this app, I\'ll send the location of the person calling so the recipient can see where the other user is calling from. </string>
 
-    <string name="gender_unknown">Unknown</string>
-    <string name="gender_male">Male</string>
-    <string name="gender_female">Female</string>
+    <string name="gender_unknown">Type entreprise</string>
+    <string name="gender_ongs">ONGs</string>
+    <string name="gender_publics">Publics</string>
 
     <string name="open_drawer">Open Drawer</string>
     <string name="cloase_drawer">Close Drawer</string>

@@ -27,7 +27,7 @@ import com.example.myotp.login.LoginActivity;
 import com.example.myotp.login.SignIn;
 import com.example.myotp.map.ActivityMaps;
 import com.example.myotp.otp.SendOPTActivity;
-import com.example.myotp.server.scripts.Editor;
+import com.example.myotp.server.scripts.EditorActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -114,7 +114,7 @@ public class Drawables extends AppCompatActivity implements View.OnClickListener
                 startActivity(auth);
                 break;
             case R.id.img_addlocation :
-                Intent Add = new Intent(this, Editor.class);
+                Intent Add = new Intent(this, EditorActivity.class);
                 startActivity(Add);
                 break;
             case R.id.img_profil :

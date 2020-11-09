@@ -27,9 +27,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-public class Servers extends AppCompatActivity {
-
+public class Server extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private Adapter adapter;
@@ -41,8 +39,7 @@ public class Servers extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.server);
-
+        setContentView(R.layout.activity_server);
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 
         progressBar = findViewById(R.id.progress);
@@ -55,7 +52,7 @@ public class Servers extends AppCompatActivity {
             @Override
             public void onRowClick(View view, final int position) {
 
-                Intent intent = new Intent(Servers.this, Editor.class);
+                Intent intent = new Intent(Server.this, EditorActivity.class);
                 intent.putExtra("id", petsList.get(position).getId());
                 intent.putExtra("name", petsList.get(position).getName());
                 intent.putExtra("species", petsList.get(position).getSpecies());
@@ -88,12 +85,11 @@ public class Servers extends AppCompatActivity {
 
             }
         };
-
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Servers.this, Editor.class));
+                startActivity(new Intent(Server.this, EditorActivity.class));
             }
         });
 
@@ -124,7 +120,6 @@ public class Servers extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-
                 adapter.getFilter().filter(newText);
                 return false;
             }
@@ -154,15 +149,15 @@ public class Servers extends AppCompatActivity {
             public void onResponse(Call<List<Pets>> call, Response<List<Pets>> response) {
                 progressBar.setVisibility(View.GONE);
                 petsList = response.body();
-                Log.i(Servers.class.getSimpleName(), response.body().toString());
-                adapter = new Adapter(petsList, Servers.this, listener);
+                Log.i(Server.class.getSimpleName(), response.body().toString());
+                adapter = new Adapter(petsList, Server.this, listener);
                 recyclerView.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
             }
 
             @Override
             public void onFailure(Call<List<Pets>> call, Throwable t) {
-                Toast.makeText(Servers.this, "rp :"+
+                Toast.makeText(Server.this, "rp :"+
                                 t.getMessage().toString(),
                         Toast.LENGTH_SHORT).show();
             }
@@ -177,22 +172,22 @@ public class Servers extends AppCompatActivity {
             @Override
             public void onResponse(Call<Pets> call, Response<Pets> response) {
 
-                Log.i(Servers.class.getSimpleName(), "Response "+response.toString());
+                Log.i(Server.class.getSimpleName(), "Response "+response.toString());
 
                 String value = response.body().getValue();
                 String message = response.body().getMassage();
 
                 if (value.equals("1")){
-                    Toast.makeText(Servers.this, message, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Server.this, message, Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(Servers.this, message, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Server.this, message, Toast.LENGTH_SHORT).show();
                 }
 
             }
 
             @Override
             public void onFailure(Call<Pets> call, Throwable t) {
-                Toast.makeText(Servers.this, t.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Server.this, t.getMessage().toString(), Toast.LENGTH_SHORT).show();
             }
         });
     }

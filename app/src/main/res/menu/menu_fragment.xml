@@ -5,9 +5,14 @@
         android:title="Homes"
         android:icon="@drawable/ic_home_nav"/>
     <item
-        android:id="@+id/nav_groupes"
-        android:title="Groupe Users"
-    android:icon="@drawable/ic_profils_goupes"/>
+        android:id="@+id/nav_calling"
+        android:title="Calling sos"
+        android:icon="@drawable/ic_sos_lct"/>
+    <item
+        android:id="@+id/nav_addLocation"
+        android:title="Add Location"
+        android:icon="@drawable/ic_baseline_add_24"/>
+
     <item
         android:id="@+id/profil_users"
         android:title="Profil"

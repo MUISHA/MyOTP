@@ -6,6 +6,18 @@
         android:id="@+id/action_logout"
         android:title="Logout" />
     <item
+        android:id="@+id/action_design"
+        android:title="Design" />
+    <item
+        android:id="@+id/action_appropos"
+        android:title="Version" />
+    <item
+        android:id="@+id/action_getmap"
+        android:title="Maps" />
+    <item
+        android:id="@+id/action_exist"
+        android:title="Exit" />
+    <item
         android:id="@+id/action_search"
         android:orderInCategory="100"
         android:title="Search"

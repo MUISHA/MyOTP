@@ -1,5 +1,6 @@
 package com.example.myotp.server.scripts;
 
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -25,13 +26,14 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> implements Filterable {
 
-    List<Pets> pets, petsFilter;
+    ArrayList<Pets> pets;
+    List<Pets> petsFilter;
     private Context context;
     private RecyclerViewClickListener mListener;
     CustomFilter filter;
 
-    public Adapter(List<Pets> pets, Context context, RecyclerViewClickListener listener) {
-        this.pets = pets;
+    public Adapter(List<Pets> pets, Server context, RecyclerViewClickListener listener) {
+        this.pets = (ArrayList<Pets>) pets;
         this.petsFilter = pets;
         this.context = context;
         this.mListener = listener;

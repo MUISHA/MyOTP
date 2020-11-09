@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".server.scripts.Editor">
+    tools:context=".server.scripts.EditorActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
                 android:id="@+id/picture"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
-                android:src="@drawable/ic_launcher_foreground" />
+                android:src="@drawable/logo" />
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fabChoosePic"
                 android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
                 android:layout_marginRight="10dp"
                 app:srcCompat="@drawable/ic_picture"
                 app:fabSize="mini"
-                tools:ignore="VectorDrawableCompat" />
+                tools:ignore="ContentDescription,VectorDrawableCompat" />
         </RelativeLayout>
 
         <androidx.cardview.widget.CardView
@@ -52,7 +52,7 @@
                 android:layout_margin="16dp">
 
                 <TextView
-                    android:text="Overview"
+                    android:text="Coordonnee entreprise"
                     android:layout_marginLeft="3dp"
                     android:layout_marginBottom="10dp"
                     android:textSize="20sp"
@@ -66,37 +66,44 @@
                     android:layout_height="wrap_content">
                     <EditText
                         android:id="@+id/name"
-                        android:hint="Name"
+                        android:hint="Name entreprise"
+                        android:padding="10dp"
+                        android:layout_margin="20dp"
                         android:fontFamily="sans-serif-light"
                         android:inputType="textPersonName|textCapWords"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <EditText
+               <TextView
                         android:id="@+id/species"
-                        android:hint="Species"
+                        android:hint="Latitude"
+                        android:layout_margin="20dp"
+                        android:padding="10dp"
                         android:fontFamily="sans-serif-light"
-                        android:inputType="textPersonName|textCapWords"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:layout_height="40dp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <EditText
                         android:id="@+id/breed"
-                        android:hint="Breed"
+                        android:hint="Longitude"
+                        android:layout_margin="20dp"
                         android:fontFamily="sans-serif-light"
                         android:inputType="textPersonName|textCapWords"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </com.google.android.material.textfield.TextInputLayout>
-
+                <TextView
+                    android:id="@+id/mLocationCoordone"
+                    android:hint="Coordonnee"
+                    android:layout_margin="20dp"
+                    android:padding="10dp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -115,8 +122,9 @@
                 android:layout_margin="16dp">
 
                 <TextView
-                    android:text="Gender"
+                    android:text="Type"
                     android:layout_marginLeft="4dp"
+                    android:textColor="@color/colorGreen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
@@ -149,7 +157,7 @@
                         android:layout_height="wrap_content">
                         <EditText
                             android:id="@+id/birth"
-                            android:hint="Birth"
+                            android:hint="Date save"
                             android:inputType="date"
                             android:fontFamily="sans-serif-light"
                             android:layout_width="match_parent"

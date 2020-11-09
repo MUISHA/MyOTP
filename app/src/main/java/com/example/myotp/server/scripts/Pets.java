@@ -3,7 +3,6 @@ package com.example.myotp.server.scripts;
 import com.google.gson.annotations.SerializedName;
 
 public class Pets {
-
     @SerializedName("id")
     private int id;
     @SerializedName("name")

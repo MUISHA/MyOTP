@@ -28,6 +28,8 @@ import com.sinch.android.rtc.calling.CallClientListener;
 import com.sinch.android.rtc.video.VideoController;
 import com.sinch.android.rtc.video.VideoScalingType;
 
+import java.util.Map;
+
 public class SinchService extends Service {
 
     private static final String APP_KEY = "0f21f696-3e86-45b6-afbd-82a57137928f";
@@ -101,13 +103,18 @@ public class SinchService extends Service {
 
 
         public Call callUseraudio(String userId) {
-
             return mSinchClient.getCallClient().callUser(userId);
-
         }
 
-
-
+        /**
+         * callign Maps
+         * @param userId
+         * @param headers
+         * @return
+         */
+        public Call callUser(String userId, Map<String, String> headers) {
+            return mSinchClient.getCallClient().callUser(userId, headers);
+        }
 
         public String getUserName() {
             return mUserId;

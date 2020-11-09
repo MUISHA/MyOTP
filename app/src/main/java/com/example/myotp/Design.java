@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.myotp.login.DeshboadActivity;
 import com.example.myotp.menu.Drawables;
 
 public class Design extends AppCompatActivity {
@@ -34,7 +35,7 @@ public class Design extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent  intent = new Intent(this, Drawables.class);
+        Intent  intent = new Intent(this, DeshboadActivity.class);
         startActivity(intent);
         finish();
     }

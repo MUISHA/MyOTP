@@ -7,12 +7,7 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
-/**
- * Created by haerul on 15/03/18.
- */
-
 public interface ApiInterface {
-
     @POST("get_pets.php")
     Call<List<Pets>> getPets();
 

@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="50dp"
             android:gravity="center"
@@ -42,16 +42,7 @@
             android:text="@string/nous_vous_enverrons_un_mot_de_passe_unique_sur_ce_mobile"
             android:textColor="@color/colorPrimary" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="30dp"
-            android:gravity="center"
-            android:text="@string/entre_mobile_number"
-            android:textColor="@color/colorTextSecond"
-            android:textSize="14sp" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,9 +54,11 @@
 
             <EditText
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:background="@null"
                 android:gravity="center"
+                android:padding="5dp"
+                android:layout_margin="5dp"
                 android:text="@string/_243"
                 android:textColor="@color/colorTextPrimary"
                 android:textSize="16sp"
@@ -77,7 +70,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:background="@null"
-                android:hint=" 1234567890"
+                android:hint="1234567890"
+                android:layout_margin="5dp"
+                android:padding="5dp"
                 android:imeOptions="actionDone"
                 android:importantForAutofill="no"
                 android:inputType="textAutoComplete|number"

@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.example.myotp.login.DeshboadActivity;
 import com.example.myotp.login.LoginActivity;
 import com.example.myotp.menu.Drawables;
 import com.google.android.gms.common.api.ApiException;
@@ -109,7 +110,7 @@ public class ActivityMaps extends AppCompatActivity implements OnMapReadyCallbac
                         //startActivity(new Intent(MapActivity.this, MainActivity.class));
                         //finish();
                     }
-                }, 9000);
+                }, 10000);
 
             }
         });
@@ -221,7 +222,7 @@ public class ActivityMaps extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(ActivityMaps.this, Drawables.class);
+        Intent intent = new Intent(ActivityMaps.this, DeshboadActivity.class);
         startActivity(intent);
         finish();
     }

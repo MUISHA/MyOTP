@@ -38,17 +38,24 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".loanding.Loading"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"/>
-        <activity android:name=".login.SignIn"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".server.scripts.Server"></activity>
+        <activity android:name=".server.scripts.EditorActivity" />
+        <activity
+            android:name=".loanding.Loading"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".login.RegisterActivity"
+        <activity
+            android:name=".login.SignIn"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"/>
-        <activity android:name=".login.LoginActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".login.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".login.LoginActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".map.ActivityMaps" />
@@ -61,13 +68,22 @@
             android:name=".menu.Drawables"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".frontend.Enternumber" />
-        <activity android:name=".frontend.Incoming_audio_call" />
-        <activity android:name=".frontend.AudioCallScreen" />
-        <activity android:name=".frontend.AudioCall" />
         <activity
-            android:name=".server.scripts.Editor"
-            android:theme="@style/EditorTheme" /> <!--  -->
+            android:name=".frontend.Enternumber"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".frontend.Incoming_audio_call"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".frontend.AudioCallScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".frontend.AudioCall"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" /> <!--  -->
         <activity
             android:name=".map.MapsActivity"
             android:screenOrientation="portrait"
@@ -79,8 +95,9 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".otp.SendOPTActivity"
-            android:parentActivityName=".menu.Drawables"
-            android:screenOrientation="portrait" />
+            android:parentActivityName=".login.DeshboadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".login.DeshboadActivity"
             android:screenOrientation="portrait"
@@ -96,6 +113,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/maps_key" />
 
+        <service android:name=".server.FetchAdresseIntentService" />
         <service android:name=".backend.SinchService" />
     </application>
 

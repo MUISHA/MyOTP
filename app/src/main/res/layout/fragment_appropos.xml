@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="14dp"
-    android:gravity="center_horizontal"
-    tools:context=".Apropos">
+    android:padding="14dp">
     <TextView
         android:id="@+id/text_view"
         android:layout_width="match_parent"
@@ -23,16 +20,5 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-    <TextView
-        android:gravity="center_horizontal"
-        android:id="@+id/versionIp"
-        android:textStyle="bold"
-        android:text="Version 1.10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <View
-        android:layout_width="match_parent"
-        android:background="@color/colorGreen"
-        android:layout_height="0dp"/>
 
 </LinearLayout>

@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.myotp.R;
+import com.example.myotp.login.DeshboadActivity;
 import com.example.myotp.menu.Drawables;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.PhoneAuthCredential;
@@ -80,7 +81,7 @@ public class SendOPTActivity extends AppCompatActivity  {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this, Drawables.class);
+        Intent intent = new Intent(this, DeshboadActivity.class);
         startActivity(intent);
         finish();
     }

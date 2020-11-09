@@ -22,7 +22,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="50dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="50dp"
                 android:gravity="center"
@@ -32,11 +32,13 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="50dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
                 android:gravity="center"
                 android:text="@string/entrez_l_otp_envoyer"
                 android:textColor="@color/colorPrimary" />
@@ -61,7 +63,7 @@
                 >
                 <EditText
                     android:id="@+id/inputCode1"
-                    android:layout_width="40dp"
+                    android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:gravity="center"
                     android:imeOptions="actionNext"
@@ -75,7 +77,7 @@
                     />
                 <EditText
                     android:id="@+id/inputCode2"
-                    android:layout_width="40dp"
+                    android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:gravity="center"
                     android:imeOptions="actionNext"
@@ -89,7 +91,7 @@
                     />
                 <EditText
                     android:id="@+id/inputCode3"
-                    android:layout_width="40dp"
+                    android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:gravity="center"
                     android:imeOptions="actionNext"
@@ -103,7 +105,7 @@
                     />
                 <EditText
                     android:id="@+id/inputCode4"
-                    android:layout_width="40dp"
+                    android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:gravity="center"
                     android:imeOptions="actionNext"
@@ -117,7 +119,7 @@
                     />
                 <EditText
                     android:id="@+id/inputCode5"
-                    android:layout_width="40dp"
+                    android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:gravity="center"
                     android:imeOptions="actionNext"
@@ -131,7 +133,7 @@
                     />
                 <EditText
                     android:id="@+id/inputCode6"
-                    android:layout_width="40dp"
+                    android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:gravity="center"
                     android:imeOptions="actionNext"
@@ -158,6 +160,8 @@
                     android:text="@string/ne_recevez_pas_l_otp"
                     android:textColor="@color/colorTextSecond"
                     android:textSize="14sp"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
                     />
 
                 <TextView
@@ -168,7 +172,26 @@
                     android:text="@string/renvoyer_otp"
                     android:textColor="@color/colorAccent"
                     android:textSize="15sp"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
                     android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ne_recevez_pas_l_otps"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="14sp"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    />
             </LinearLayout>
             <FrameLayout
                 android:layout_width="match_parent"
@@ -177,11 +200,12 @@
                     android:id="@+id/buttonVerifyOTP"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="30dp"
+                    android:layout_margin="40dp"
                     android:background="@drawable/background"
                     android:text="@string/verify_otp"
                     android:textColor="@color/colorWhite"
                     android:textSize="16sp"
+
                     android:textStyle="bold" />
                 <ProgressBar
                     android:id="@+id/progressBar"
